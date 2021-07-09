@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hs-main" />
+        <module name="hs-mbg" />
+        <module name="hs-security" />
+        <module name="hs-admin" />
+        <module name="demo" />
+        <module name="hs-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="hs-admin" target="1.8" />
+      <module name="hs-common" target="1.8" />
+      <module name="hs-main" target="1.8" />
+      <module name="hs-mbg" target="1.8" />
+      <module name="hs-security" target="1.8" />
+      <module name="hs_code" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="hs-admin" options="-parameters" />
+      <module name="hs-common" options="-parameters" />
+      <module name="hs-main" options="-parameters" />
+      <module name="hs-mbg" options="-parameters" />
+      <module name="hs-security" options="-parameters" />
+    </option>
+  </component>
+</project>

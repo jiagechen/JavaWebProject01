@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lt-demo/demo.iml" filepath="$PROJECT_DIR$/lt-demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs-admin/hs-admin.iml" filepath="$PROJECT_DIR$/hs-admin/hs-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs-common/hs-common.iml" filepath="$PROJECT_DIR$/hs-common/hs-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs-main/hs-main.iml" filepath="$PROJECT_DIR$/hs-main/hs-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs-mbg/hs-mbg.iml" filepath="$PROJECT_DIR$/hs-mbg/hs-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs-security/hs-security.iml" filepath="$PROJECT_DIR$/hs-security/hs-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hs_code.iml" filepath="$PROJECT_DIR$/hs_code.iml" />
+    </modules>
+  </component>
+</project>
