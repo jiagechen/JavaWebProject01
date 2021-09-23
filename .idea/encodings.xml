@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/controller/AddCommentServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/AddComplaintServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/ChangeComServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/CmpltAdminServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/CommodityListServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/CommodityMdfyServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/CommodityPostServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/DealManage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/LoginServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/LogoutServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/MessageChatServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/PostUserImageServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/ShowItemImageServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/ShowUserImageServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/SignupServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/UserAdminServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/controller/UserInfoServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/dao/SensitiveWord.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/dao/UserDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/mybatis/Mybatis.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/service/CommentService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/service/CommodityService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/service/DealService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/service/MessageService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/service/UserService.java" charset="GBK" />
+  </component>
+</project>

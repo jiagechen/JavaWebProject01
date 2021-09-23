@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <environments default="development">
+	 <environment id="development">
+	 <transactionManager type="JDBC"/>
+	     <!-- 配置数据库信息  -->
+		 <dataSource type="POOLED">
+		 <property name="driver" value="com.mysql.jdbc.Driver"/>
+		 <property name="url" value="jdbc:mysql://localhost:3306/dawnblossomspluckedatdusk?useUnicode=true&amp;characterEncoding=utf8"/>
+		 <property name="username" value="root"/>
+		 <property name="password" value="root"/>
+	 </dataSource>
+	 </environment>
+ </environments>
+ <mappers>
+    <!-- 映射文件路径 -->
+ 	<mapper resource="mapper/UserMapper.xml"/>
+ 	<mapper resource="mapper/CommentMapper.xml"/>
+ 	<mapper resource="mapper/DealMapper.xml"/>
+ 	<mapper resource="mapper/MessageMapper.xml"/>
+ 	<mapper resource="mapper/CommodityMapper.xml"/>
+ 	<mapper resource="mapper/SensitiveWordMapper.xml"/>
+ 	
+
+ </mappers>
+</configuration>

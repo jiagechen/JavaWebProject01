@@ -1,0 +1,112 @@
+
+
+ #findform {
+	width: 1000px;
+	height: 700px;
+	margin: 0 auto 0;
+}
+
+#findform fieldset {
+	/* background-color: rgba(0,0,0,0.5); */
+	float: none;
+	width: 1000px;
+	height: 700px;
+	display: inline-block;
+	/* border: 7px solid yellowgreen; */
+	font-size: 40px;
+	font-weight: 500;
+	margin: 0 auto 0;
+	/* color: springgreen; */
+
+}
+
+#findform p {
+	color: black;
+	font-size: 25px;
+	margin-top: 25px;
+	margin-left: 60px;
+}
+
+#findform input {
+	width: 500px;
+	height: 50px;
+}
+#findform p select {
+	width: 500px;
+	height: 50px;
+}
+
+#findform textarea {
+	margin-top: 5px;
+	width: 800px;
+	height: 100px;
+}
+
+#findform #submit {
+	margin-left: 120px;
+	background: black;
+	border: 2px solid white;
+	width: 200px;
+	height: 70px;
+	color: white;
+	font-size: 25px;
+}
+
+#findform #reset {
+	margin-left: 100px;
+	background: black;
+	border: 2px solid white;
+	width: 200px;
+	height: 70px;
+	color: white;
+	font-size: 25px;
+}
+
+#findform #submit:hover {
+	margin-left: 120px;
+	background: white;
+	border: 2px solid black;
+	color: black;
+	transition: 1.5s;
+	font-size: 26px;
+}
+
+#findform #reset:hover {
+	background: white;
+	border: 2px solid black;
+	color: black;
+	transition: 1.5s;
+	font-size: 26px;
+}
+
+/* #sellload #sellload-content #footer{
+	width: 800px;
+	display: inline-block;
+	margin: 5px auto 0;
+} */
+#findform select {
+	display: inline-block;
+	width: 120px;
+	height: 28px;
+}
+
+#findform #item-img1 {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+#findform .upload #file1 {
+	width: 80px;
+	height: 32px;
+	border: 1px solid black;
+	background-color: black;
+	color: #fff;
+	display: inline-block;
+	line-height: 34px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 5;
+	border-radius: 4px;
+}
+

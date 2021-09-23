@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>controller.SignupServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/Signup</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+       
+    <servlet>
+        <servlet-name>CommodityListServlet</servlet-name>
+        <servlet-class>controller.CommodityListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+	    <servlet-name>CommodityListServlet</servlet-name>
+	    <url-pattern>/CommodityList</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+      <servlet-name>UserInfoServlet</servlet-name>
+      <servlet-class>controller.UserInfoServlet</servlet-class>
+    </servlet>
+	    
+    <servlet-mapping>
+      <servlet-name>UserInfoServlet</servlet-name>
+      <url-pattern>/UserInfo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>DealManageServlet</servlet-name>
+      <servlet-class>controller.DealManage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>DealManageServlet</servlet-name>
+      <url-pattern>/DealManage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>PostUserImageServlet</servlet-name>
+      <servlet-class>controller.PostUserImageServlet</servlet-class>
+    </servlet>
+  
+    <servlet-mapping>
+      <servlet-name>PostUserImageServlet</servlet-name>
+      <url-pattern>/PostUserImage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ShowUserImageServlet</servlet-name>
+      <servlet-class>controller.ShowUserImageServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>ShowUserImageServlet</servlet-name>
+      <url-pattern>/ShowUserImage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>MessageChatServlet</servlet-name>
+      <servlet-class>controller.MessageChatServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>MessageChatServlet</servlet-name>
+      <url-pattern>/MessageChat</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>PostMessageServlet</servlet-name>
+      <servlet-class>controller.PostMessageServlet</servlet-class>
+    </servlet>
+  
+    <servlet-mapping>
+      <servlet-name>PostMessageServlet</servlet-name>
+      <url-pattern>/PostMessage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>CommodityInfoServlet</servlet-name>
+      <servlet-class>controller.CommodityInfoServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>CommodityInfoServlet</servlet-name>
+      <url-pattern>/CommodityInfo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>CommodityPostServlet</servlet-name>
+      <servlet-class>controller.CommodityPostServlet</servlet-class>
+    </servlet>
+   
+    <servlet-mapping>
+      <servlet-name>CommodityPostServlet</servlet-name>
+      <url-pattern>/CommodityPost</url-pattern>
+    </servlet-mapping>
+      
+    <servlet>
+      <servlet-name>ShowItemImageServlet</servlet-name>
+      <servlet-class>controller.ShowItemImageServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>ShowItemImageServlet</servlet-name>
+      <url-pattern>/ShowItemImage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>UserAdminServlet</servlet-name>
+      <servlet-class>controller.UserAdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>UserAdminServlet</servlet-name>
+      <url-pattern>/UserAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>CommodityMdfyServlet</servlet-name>
+      <servlet-class>controller.CommodityMdfyServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+      <servlet-name>CommodityMdfyServlet</servlet-name>
+      <url-pattern>/CommodityMdfy</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ChangeComServlet</servlet-name>
+      <servlet-class>controller.ChangeComServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>ChangeComServlet</servlet-name>
+      <url-pattern>/ChangeCom</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>AddCommentServlet</servlet-name>
+      <servlet-class>controller.AddCommentServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>AddCommentServlet</servlet-name>
+      <url-pattern>/AddComment</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>DealAdminServlet</servlet-name>
+      <servlet-class>controller.DealAdminServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+      <servlet-name>DealAdminServlet</servlet-name>
+      <url-pattern>/DealAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>AddComplaintServlet</servlet-name>
+      <servlet-class>controller.AddComplaintServlet</servlet-class>
+    </servlet>
+     
+    <servlet-mapping>
+      <servlet-name>AddComplaintServlet</servlet-name>
+      <url-pattern>/AddComplaint</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>CmpltAdminServlet</servlet-name>
+      <servlet-class>controller.CmpltAdminServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>CmpltAdminServlet</servlet-name>
+      <url-pattern>/CmpltAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>MessageAdminServlet</servlet-name>
+      <servlet-class>controller.MessageAdminServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>MessageAdminServlet</servlet-name>
+       <url-pattern>/MessageAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>MdfyUserInfo</servlet-name>
+      <servlet-class>controller.MdfyUserInfo</servlet-class>
+    </servlet>
+  
+    <servlet-mapping>
+      <servlet-name>MdfyUserInfo</servlet-name>
+      <url-pattern>/MdfyUserInfo</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

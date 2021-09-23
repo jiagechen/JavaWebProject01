@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CommentMapper">
+
+    <select id="findByCommodityId" parameterType="int" resultType="entity.Comment">
+        SELECT * FROM comment WHERE commodityId=#{commodityId} and (type = 1 or type = 2)
+    </select>
+    
+    <select id="findType3" parameterType="entity.PageDeal" resultType="entity.Comment">
+        SELECT * FROM comment WHERE  (type = 3 or type = 4) order by type limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByTopicId" parameterType="int" resultType="entity.Comment">
+        SELECT * FROM comment WHERE  topicId=#{topicId}
+    </select>
+
+    <select id="findByCommentId" parameterType="int" resultType="entity.Comment">
+        SELECT * FROM comment WHERE   commentId=#{commentId} 
+    </select>
+
+    <select id="findById" parameterType="String" resultType="entity.Comment">
+        SELECT * FROM comment WHERE   id=#{id}
+    </select>
+
+    <select id="findByDeId" parameterType="String" resultType="entity.Comment">
+        SELECT * FROM comment WHERE   deId=#{deId}
+    </select>
+
+    <select id="findByType" parameterType="int" resultType="entity.Comment">
+        SELECT * FROM comment WHERE   type=#{type}
+    </select>
+
+    <select id="findAllComment"  resultType="entity.Comment">
+        SELECT * FROM comment
+    </select>
+      
+    <select id="findByPriKey"  parameterType="java.util.Map" resultType="entity.Comment">
+        SELECT * FROM comment WHERE commodityId=#{commodityId} AND topicId=#{topicId} AND commentId=#{commentId}
+    </select>
+    
+     <select id="findByCmdtIdAndTpcId"  parameterType="java.util.Map" resultType="entity.Comment">
+        SELECT * FROM comment WHERE commodityId=#{commodityId} AND topicId=#{topicId}
+    </select>
+
+    <select id="findByLastTopic" parameterType="Integer" resultType="Integer">
+        SELECT max(topicId) FROM comment WHERE commodityId=#{commodityId}
+    </select>
+
+    <select id="findByLastComment" parameterType="java.util.Map" resultType="Integer">
+        SELECT max(commentId) FROM comment WHERE commodityId=#{commodityId} AND topicId=#{topicId}
+    </select>
+
+    <insert id="addComment" parameterType="entity.Comment">
+        INSERT INTO comment VALUES (#{commodityId},#{commodityName},#{topicId},#{commentId},#{id},
+        <if test = "content == null">default,</if>
+        <if test = "content != null">#{content},</if>
+        <if test="deId == null">DEFAULT,</if>
+        <if test="deId != null">#{deId},</if>
+        <if test="deContent == null">DEFAULT ,</if>
+        <if test="deContent != null">#{deContent},</if>
+        #{time},#{type},#{likeNum}
+        )
+    </insert>
+
+    <update id="updateComment" parameterType="entity.Comment">
+        UPDATE comment
+        <set>
+            <if test="commodityName != null">commodityName=#{commodityName},</if>
+            <if test="id != null">id=#{id},</if>
+            <if test="content != null">content=#{content},</if>
+            <if test="deId != null">deId=#{deId},</if>
+            <if test="deContent != null">deContent=#{deContent},</if>
+            <if test="time != null">time=#{time},</if>
+            <if test="type != -1">type=#{type},</if>
+            <if test="likeNum != -1">likeNum=#{likeNum}</if>
+        </set>
+        WHERE commodityId=#{commodityId} AND topicId=#{topicId} AND commentId=#{commentId}
+    </update>
+
+    <delete id="deleteByCommodityId" parameterType="int">
+        DELETE FROM comment WHERE commodityId=#{commodityId}
+    </delete>
+
+    <delete id="deleteByTopicId" parameterType="java.util.Map">
+        DELETE FROM comment WHERE commodityId=#{commodityId} AND topicId=#{topicId}
+    </delete>
+
+    <delete id="deleteByCommentId" parameterType="java.util.Map">
+        DELETE FROM comment WHERE  commodityId=#{commodityId} AND topicId=#{topicId} AND commentId=#{commentId}
+    </delete>
+
+    <delete id="deleteById" parameterType="String">
+        DELETE FROM comment WHERE   id=#{id}
+    </delete>
+
+    <delete id="deleteByDeId" parameterType="String">
+        DELETE FROM comment WHERE   deId=#{deId}
+    </delete>
+
+    <delete id="deleteByType" parameterType="int">
+        DELETE FROM comment WHERE   type=#{type}
+    </delete>
+
+</mapper>

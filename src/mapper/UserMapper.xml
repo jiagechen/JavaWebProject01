@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.UserMapper">
+
+    <select id="findById" parameterType="String" resultType="entity.User">
+        SELECT * FROM USER WHERE id = #{id}
+    </select>
+
+    <select id="findByStatus" parameterType="entity.PageUser" resultType="entity.User">
+        SELECT * FROM USER WHERE status=#{ifm} ORDER by  id desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findBySchool" parameterType="entity.PageUser" resultType="entity.User">
+        SELECT * FROM USER WHERE school=#{ifm} ORDER by  status asc ,id desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findAllUser" parameterType="entity.PageUser" resultType="entity.User">
+        SELECT * FROM USER ORDER by  status asc ,id desc limit #{recNum},#{pageSize}
+    </select>
+    
+    <select id="findSomeUser" parameterType="entity.PageUser" resultType="entity.User">
+        SELECT * FROM USER WHERE status=0 or status=2 ORDER BY id DESC limit #{recNum},#{pageSize}
+    </select>
+
+    <insert id="addUser" parameterType="entity.User">
+        INSERT INTO USER VALUES (#{id},#{name},#{password},#{school},
+        <if test = "status ==-1">default,</if>
+        <if test = "status !=-1">#{status},</if>
+        <if test = "reputation == -1">default,</if>
+        <if test = "reputation !=-1">#{reputation},</if>
+        <if test = "preference == null">default,</if>
+        <if test = "preference !=null">#{preference},</if>
+        <if test = "imageURL == null">default</if>
+        <if test = "imageURL != null">#{imageURL}</if>
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="entity.User">
+        UPDATE USER
+        <set>
+            <if test = "name != null">name=#{name},</if>
+            <if test = "password != null">password=#{password},</if>
+            <if test = "school !=null">school=#{school},</if>
+            <if test = "status != -1">status=#{status},</if>
+            <if test = "reputation != -1">reputation=#{reputation},</if>
+            <if test = "preference != null">preference=#{preference},</if>
+            <if test = "imageURL != null">imageURL=#{imageURL}</if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="String">
+        DELETE FROM USER WHERE id = #{id}
+    </delete>
+
+</mapper>

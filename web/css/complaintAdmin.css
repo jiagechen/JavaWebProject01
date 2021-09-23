@@ -1,0 +1,42 @@
+.glyphicon-cloud-upload{
+	float: right;
+	padding-right: 30px;
+}
+.glyphicon-pencil{
+	float: right;
+	padding-right: 30px;
+}
+.glyphicon-ok{
+	float: right;
+	padding-right: 30px;
+}
+.glyphicon-remove{
+	float: right;
+}
+.glyphicon-comment{
+	float: right;
+	padding-right: 30px;
+}
+.glyphicon-trash{
+	float: right;
+}
+.panel-heading{
+	font-size: 20px;
+}
+.media-left{
+	padding-left: 100px;
+}
+.media-body{
+	padding-left: 180px;
+}
+.media-body .Otherfont{
+	padding-left: 60px;
+}
+.media-body .Otherfont p{
+	font-size: 20px;
+	line-height: 80px;
+}
+#uploadForm{
+	padding-left: 200px;
+	/* line-height: 30px; */
+}

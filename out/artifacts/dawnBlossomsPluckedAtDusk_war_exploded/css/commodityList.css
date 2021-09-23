@@ -1,0 +1,158 @@
+#bg1 {}
+
+#search {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#search-name {
+	width: 1200px;
+	height: 40px;
+	float: left;
+	/* border-bottom: 1px solid black; */
+	/* background-color: lightblue; */
+}
+
+#search-name form {
+	width: 1200px;
+}
+
+#search-name .text {
+	display: inline-block;
+	margin: 4px 5px 2px 100px;
+	width: 200px;
+	height: 30px;
+	font-size: 13px;
+}
+
+#search-name .submit {
+	width: 50px;
+	margin-right: 40px;
+	height: 30px;
+	/* background: #38B7FF; */
+}
+
+#classify {
+	width: 1200px;
+	height: 40px;
+	/* background: lightblue; */
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: "黑体";
+	border-top: 1px solid white;
+	margin-top: 10px;
+}
+
+#classify #selected {
+	width: 200px;
+	height: 40px;
+	float: left;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 97px;
+}
+
+#classify #famtable {
+	width: 700px;
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+	padding-left: 200px;
+	/* font-size: 15px; */
+	/* border-spacing: 10px; */
+}
+
+#classify #famtable input{
+	width: 100px;
+	height: 20px;
+	border-bottom: 1px solid gray;
+	text-align: center;
+
+}
+
+#bg2{
+	/* background: blanchedalmond; */
+}
+
+
+#bg2 .showitem{
+	width: 1200px;
+	/* background: floralwhite; */
+	margin: 0 auto;
+	overflow: hidden;
+}
+#bg2 .showitem .items{
+	width:1080px ;
+	height: 400px;
+	margin: 40px auto 0;
+	overflow: hidden;
+}
+#bg2 .showitem .item{
+	border: 2px dashed black;
+	width: 298px;
+	height: 380px;
+	float: left;
+	background-color: floralwhite;
+	margin: 0 30px;
+}
+#bg2 .showitem .item:hover{
+	border: 2px dashed #de4b15;
+	transition: 0.5s;
+}
+#bg2 .showitem .item .picture{
+	width: 280px;
+	height: 280px;
+	margin: 10px auto;
+}
+#bg2 .showitem .item img{
+	width: 280px;
+	height: 280px;
+}
+#bg2 .showitem .item .itemname{
+		margin: 10px 0 10px 20px;
+		float: left;
+		width: 150px;
+		overflow: hidden;
+		height: 20px;
+}
+#bg2 .showitem .item .clasify{
+	float: right;
+	margin: 10px 30px 10px 0;
+	width: 80px;
+	overflow: hidden;
+	height: 20px;
+	color: dimgray;
+}
+#bg2 .showitem .item li{
+	white-space: nowrap;
+	display: inline-block;
+	margin-left: 10px;
+	width: 280px;
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#bg2 .showitem .item  a{
+	color: black;
+}
+#barcon2 {
+	width: 520px;
+	height: 80px;
+	background: #EFF3F8;
+	padding-top: 8px;
+	padding-left: 70px;
+	margin: 20px auto 0;
+}
+
+#barcon2 .barcon2-font {
+	color: #292929;
+	font-size: 14px;
+	
+}
+
+#barcon2 .barcon2-font input{
+	width: 30px;
+}
+#barcon2 .barcon2-font #jumpWhere{
+	margin-left: 55px;
+}

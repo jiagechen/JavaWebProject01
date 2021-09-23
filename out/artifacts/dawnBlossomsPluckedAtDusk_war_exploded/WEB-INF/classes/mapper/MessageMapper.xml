@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.MessageMapper">
+
+    <select id="findByMessageId" parameterType="int" resultType="entity.Message">
+        SELECT * FROM message WHERE  messageId=#{messageId}
+    </select>
+
+    <select id="findBySenderId" parameterType="String" resultType="entity.Message">
+        SELECT * FROM message WHERE   senderId=#{senderId}
+    </select>
+
+    <select id="findByReceiverId" parameterType="String" resultType="entity.Message">
+        SELECT * FROM message WHERE   receiverId=#{receiverId}
+    </select>
+
+    <select id="findBySenderAndReceiver" parameterType="java.util.Map" resultType="entity.Message">
+        SELECT * FROM message WHERE senderId=#{senderId} AND receiverId=#{receiverId}
+    </select>
+
+    <select id="findByStatus" parameterType="int" resultType="entity.Message">
+        SELECT * FROM message WHERE   status=#{status}
+    </select>
+
+    <select id="findByCommodityId" parameterType="int" resultType="entity.Message">
+        SELECT * FROM message WHERE   commodityId=#{commodityId}
+    </select>
+
+    <select id="findAllMessage"  resultType="entity.Message">
+        SELECT * FROM message
+    </select>
+    
+    <select id="findUMessage" parameterType="String" resultType="entity.Message">
+        SELECT * FROM message WHERE receiverId=#{receiverId} AND status=1
+    </select>
+
+    <insert id="addMessage" parameterType="entity.Message">
+        INSERT INTO message VALUES (NULL,#{messageContent},#{senderId},#{receiverId},#{postTime},
+        <if test = "status ==-1">default,</if>
+        <if test = "status !=-1">#{status},</if>
+        <if test = "commodityId == -1">default,</if>
+        <if test = "commodityId != -1">#{commodityId},</if>
+        <if test = "commodityName == null">default</if>
+        <if test = "commodityName != null">#{commodityName}</if>
+        )
+    </insert>
+
+    <update id="updateMessage" parameterType="entity.Message">
+        UPDATE message
+        <set>
+            <if test = "messageContent != null">messageContent=#{messageContent},</if>
+            <if test = "senderId != null">senderId=#{senderId},</if>
+            <if test = "receiverId !=null">receiverId=#{receiverId},</if>
+            <if test = "postTime != null">postTime=#{postTime},</if>
+            <if test = "status != -1">status=#{status},</if>
+            <if test = "commodityId != -1">commodityId=#{commodityId},</if>
+            <if test = "commodityName != null">commodityName=#{commodityName}</if>
+        </set>
+        WHERE messageId=#{messageId}
+    </update>
+
+    <delete id="deleteByMessageId" parameterType="int">
+        DELETE FROM message WHERE  messageId=#{messageId}
+    </delete>
+
+    <delete id="deleteBySenderId" parameterType="String">
+        DELETE FROM message WHERE  senderId=#{senderId}
+    </delete>
+
+    <delete id="deleteByReceiverId" parameterType="String">
+        DELETE FROM message WHERE   receiverId=#{receiverId}
+    </delete>
+
+    <delete id="deleteByStatus" parameterType="int">
+        DELETE FROM message WHERE   status=#{status}
+    </delete>
+
+    <delete id="deleteByCommodityId" parameterType="int">
+        DELETE FROM message WHERE   commodityId=#{commodityId}
+    </delete>
+
+</mapper>

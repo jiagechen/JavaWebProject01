@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CommodityMapper">
+   
+    <select id="findByCommodityName" resultType="entity.Commodity" parameterType="entity.PageCommodity">
+		 select * from commodity where commodityname like #{ifm} order by commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByCommodityId" parameterType="int" resultType="entity.Commodity">
+        SELECT * FROM commodity WHERE commodityId=#{commodityId}
+    </select>
+
+    <select id="findByCommodityStatus" parameterType="entity.PageCommodity" resultType="entity.Commodity">
+        SELECT * FROM commodity WHERE commodityStatus=#{ifm} ORDER by  commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByCommodityType" parameterType="entity.PageCommodity" resultType="entity.Commodity">
+        SELECT * FROM commodity WHERE commodityType=#{ifm} ORDER by  commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findBySellId" parameterType="entity.PageCommodity" resultType="entity.Commodity">
+        SELECT * FROM commodity WHERE sellId=#{ifm} ORDER by  commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByPrice" parameterType="entity.PageCommodity" resultType="entity.Commodity">
+        SELECT * FROM commodity WHERE price BETWEEN #{ifm} and #{ifm1} ORDER by commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findAllCommodity" parameterType="entity.PageCommodity" resultType="entity.Commodity">
+        SELECT * FROM commodity where (commodityStatus = 2 or commodityStatus = 3 or commodityStatus = 4) ORDER by  commodityId desc limit #{recNum},#{pageSize}
+    </select>
+    
+    
+    <select id="findNewCommodityId" resultType="Integer">
+        SELECT max(commodityId) FROM commodity
+    </select>
+
+    <insert id="addCommodity" parameterType="entity.Commodity">
+        INSERT INTO commodity VALUE (NULL ,#{commodityName},#{commodityType},
+        <if test="commodityStatus == -1">DEFAULT, </if>
+        <if test="commodityStatus !=-1">#{commodityStatus},</if>
+        <if test="price == -1">DEFAULT,</if>
+        <if test="price != -1">#{price},</if>
+        #{sellId},
+        <if test="description == null">DEFAULT ,</if>
+        <if test="description != null">#{description},</if>
+        <if test="commodityImageURL == null">DEFAULT</if>
+        <if test="commodityImageURL != null">#{commodityImageURL}</if>
+        )
+    </insert>
+
+    <update id="updateCommodity" parameterType="entity.Commodity">
+        UPDATE commodity
+        <set>
+            <if test = "commodityName != null">commodityName=#{commodityName},</if>
+            <if test = "commodityType != null">commodityType=#{commodityType},</if>
+            <if test = "commodityStatus != -1">commodityStatus=#{commodityStatus},</if>
+            <if test = "price != -1">price=#{price},</if>
+            <if test = "sellId != null">sellId=#{sellId},</if>
+            <if test = "description != null">description=#{description},</if>
+            <if test = "commodityImageURL != null">commodityImageURL=#{commodityImageURL}</if>
+        </set>
+        WHERE commodityId=#{commodityId}
+    </update>
+
+    <delete id="deleteByCommodityId" parameterType="int">
+         DELETE FROM commodity WHERE commodityId = #{commodityId}
+    </delete>
+
+    <delete id="deleteBySellId" parameterType="String">
+        DELETE FROM commodity WHERE sellId=#{sellId}
+    </delete>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.DealMapper">
+
+    <select id="findByCommodityId" parameterType="int" resultType="entity.Deal">
+        SELECT * FROM deal WHERE commodityId=#{commodityId}
+    </select>
+
+    <select id="findBySellId" parameterType="entity.PageDeal" resultType="entity.Deal">
+        SELECT * FROM deal WHERE sellId=#{ifm} ORDER by commodityId desc, dealStatus asc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByBuyId" parameterType="entity.PageDeal" resultType="entity.Deal">
+        SELECT * FROM deal WHERE buyId=#{ifm} ORDER by commodityId desc, dealStatus asc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findByDealStatus" parameterType="entity.PageDeal" resultType="entity.Deal">
+        SELECT * FROM deal WHERE dealStatus=#{ifm} ORDER by commodityId desc limit #{recNum},#{pageSize}
+    </select>
+
+    <select id="findAllDeal" parameterType="entity.PageDeal" resultType="entity.Deal">
+        SELECT * FROM deal ORDER by commodityId desc, dealStatus asc limit #{recNum},#{pageSize}
+    </select>
+
+    <insert id="addDeal" parameterType="entity.Deal">
+        INSERT INTO deal VALUES (#{commodityId},#{commodityName},#{sellId},#{buyId},#{dealTime},#{dealStatus})
+    </insert>
+
+    <update id="updateDeal" parameterType="entity.Deal">
+        UPDATE deal
+        <set>
+            <if test="commodityName != null">commodityName=#{commodityName},</if>
+            <if test="sellId != null">sellId=#{sellId},</if>
+            <if test="buyId != null">buyId=#{buyId},</if>
+            <if test="dealTime != null">dealTime=#{dealTime},</if>
+            <if test="dealStatus != -1">dealStatus=#{dealStatus}</if>
+        </set>
+        WHERE commodityId=#{commodityId}
+    </update>
+
+    <delete id="deleteByCommodityId" parameterType="int">
+        DELETE FROM deal WHERE commodityId=#{commodityId}
+    </delete>
+
+    <delete id="deleteBySellId" parameterType="String">
+        DELETE FROM deal WHERE sellId=#{sellId}
+    </delete>
+
+    <delete id="deleteByBuyId" parameterType="String">
+        DELETE FROM deal WHERE buyId=#{buyId}
+    </delete>
+
+    <delete id="deleteByDealStatus" parameterType="int">
+        DELETE FROM deal WHERE dealStatus=#{dealStatus}
+    </delete>
+
+</mapper>

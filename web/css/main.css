@@ -1,0 +1,390 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#header{
+	height: 80px;
+	width: 100%;
+	/* background: red; */
+	background: white;
+	/* 居中 */
+	margin: 0 auto;
+}
+#header .logo{
+	width: 249px;
+	height: 31px;
+	background: white;
+	float: left;
+	margin: 10px 0 30px 19px;
+}
+#header .logo a img{
+	width: 150px;
+	height: 150px;
+}
+#header .logo2{
+	width: 249px;
+	height: 31px;
+	background: white;
+	float: left;
+	margin: 10px 0 30px 5px;
+}
+#header .logo2 a img{
+	width: 150px;
+	height: 145px;
+}
+ .name{
+	 /* width: 249px; */
+	height: 31px;
+	background: white;
+	float: left;
+	padding-left: 35%;
+	margin-top: 40px;
+}
+ .name a{
+	color: gray;
+	/* 去下划线 */
+	text-decoration:none;
+}
+
+
+#nav{
+	width: 100%;
+	height: 80px;
+	/* 背景 */
+	background: black;
+	/* margin: 0 auto; */
+}
+#nav ul{
+	padding-left: 1000px;
+}
+#nav ul li{
+	float: left;
+	/* 去点 */
+	list-style: none;
+	width: 120px;
+	height: 80px;
+	text-align: center;
+	border-right: 1px solid #4A4A4A;
+	line-height: 80px;
+	/* 文字大小 */
+	font-size: 15px;
+	/* float: right; */
+}
+#nav ul .last{
+	border-right: none;
+}
+#nav ul li a{
+	color: white;
+	/* 去下划线 */
+	text-decoration:none;
+}
+#nav ul li a:hover{
+				/* background: #de4b15; */
+				color: #de4b15;
+				transition: 1s;
+			}
+
+#banner{
+	width: 100%;
+	height: 900px;
+	/* background: rgba(0,0,0,0.9); */
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/about_1.jpg);
+	background-attachment: fixed; 
+	background-size: 100% 100%;
+}
+/* #banner  img{
+	width: 100%;
+	height: 600px;
+
+
+} */
+#banner .font{
+	width: 100%;
+	height: 500px;
+}
+#banner .font h1 {
+  display: inline;
+  background: black;
+  color: white;
+  position:absolute;  left:150px; top:150px;
+  font-size: 50px;
+}
+#banner .font p {
+  display: inline;
+  color: white;
+  position:absolute;  left:150px; top:250px;
+  font-size: 20px;
+}
+#banner .font a{
+	position:absolute;left:150px; top:300px;
+	background-color: red;
+	color: white;
+	/* 去下划线 */
+	text-decoration:none;
+	font-size: 20px;
+	text-align: center;
+	line-height: 60px;
+	width: 150px;
+	height: 60px;
+}
+#banner .font a:hover {
+  font-size: 25px;
+  transition: 1s;
+  background-color: blue;
+}
+
+#news{
+	width: 100%;
+	height: 500px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+#news .photo{
+	position:absolute;
+	left:6%; top:50px;
+	width: 550px;
+	height: 350px;
+
+}
+#news .photo img{
+	width: 550px;
+	height: 350px;
+}
+#news .newsFont{
+	width: 550px;
+	height: 300px;
+	position:absolute;  
+	left:57%; top:50px;
+
+}
+#news .newsFont p{
+	font-size: 20px;
+}
+#news .newsFont:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+			
+#news_re{
+	width: 100%;
+	height: 500px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+#news_re .photo_re{
+	position:absolute;
+	/* left:15%; top:50px; */
+	left:57%; top:50px;
+	width: 550px;
+	height: 350px;
+
+}
+#news_re .photo_re img{
+	width: 550px;
+	height: 350px;
+}
+#news_re .newsFont_re{
+	width: 550px;
+	height: 300px;
+	position:absolute;  
+	/* left:60%; top:50px; */
+    left:6%; top:50px;
+}
+#news_re .newsFont_re p{
+	font-size: 20px;
+}
+#news_re .newsFont_re:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}			
+#news1{
+	width: 100%;
+	height: 500px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+#news1 .photo{
+	position:absolute;
+	left:6%; top:50px;
+	width: 550px;
+	height: 350px;
+
+}
+#news1 .photo img{
+	width: 550px;
+	height: 350px;
+}
+#news1 .newsFont{
+	width: 550px;
+	height: 300px;
+	position:absolute;  
+	left:57%; top:50px;
+
+}
+#news1 .newsFont p{
+	font-size: 20px;
+}
+#news1 .newsFont:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+			
+#news_re1{
+	width: 100%;
+	height: 500px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+#news_re1 .photo_re{
+	position:absolute;
+	/* left:15%; top:50px; */
+	left:57%; top:50px;
+	width: 550px;
+	height: 350px;
+
+}
+#news_re1 .photo_re img{
+	width: 550px;
+	height: 350px;
+}
+#news_re1 .newsFont_re{
+	width: 550px;
+	height: 300px;
+	position:absolute;  
+	/* left:60%; top:50px; */
+    left:6%; top:50px;
+}
+#news_re1 .newsFont_re p{
+	font-size: 20px;
+}
+#news_re1 .newsFont_re:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+			
+#moment{
+	width: 100%;
+	height: 600px;
+	background: green;
+	margin: 0 auto;
+	position: relative;
+}
+#moment .moment1{
+	width: 300px;
+	height: 400px;
+	background: white;
+	position:absolute;  left:16%; top:110px;
+}
+#moment .moment1 img{
+	width: 300px;
+	height: 200px;
+}
+#moment .moment2{
+	width: 300px;
+	height: 400px;
+	background: white;
+	position:absolute;  left:40%; top:110px;
+}
+#moment .moment2 img{
+	width: 300px;
+	height: 200px;
+}
+#moment .moment3{
+	width: 300px;
+	height: 400px;
+	background: white;
+	position:absolute;  left:64%; top:110px;
+}
+#moment .moment3 img{
+	width: 300px;
+	height: 200px;
+}
+#moment .moment1:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+#moment .moment2:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+#moment .moment3:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+			
+#hre{
+	width: 100%;
+	height: 351px;
+	/* /* background: white; */ */
+	margin:0 auto;
+	position: relative;
+}
+#hre .hre1h{
+	position:absolute;  left:24%; top:80px;
+	color: white;
+}
+#hre .hre1{
+	width: 300px;
+	height: 200px;
+	background: white;
+	position:absolute;  left:16%; top:131px;
+}
+#hre .hre1 img{
+	width: 300px;
+	height: 200px;
+}
+#hre .hre2h{
+	position:absolute;  left:48%; top:80px;
+	color: white;
+}
+#hre .hre2{
+	width: 300px;
+	height: 200px;
+	background: white;
+	position:absolute;  left:40%; top:131px;
+}
+#hre .hre2 img{
+	width: 300px;
+	height: 200px;
+}
+#hre .hre3h{
+	position:absolute;  left:72%; top:80px;
+	color: white;
+}
+#hre .hre3{
+	width: 300px;
+	height: 200px;
+	background: white;
+	position:absolute;  left:64%; top:131px;
+}
+#hre .hre3 img{
+	width: 300px;
+	height: 200px;
+}
+#hre .hre1 img:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+#hre .hre2 img:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+#hre .hre3 img:hover{
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+									
+#footer{
+	width: 100%;
+	height: 50px;
+	background: #333333;
+	margin: 0 auto;
+}
+
+
