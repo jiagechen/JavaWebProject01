@@ -7,32 +7,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hs-main" />
-        <module name="hs-mbg" />
-        <module name="hs-security" />
-        <module name="hs-admin" />
+        <module name="znfx-security" />
+        <module name="znfx-admin" />
+        <module name="znfx-main" />
         <module name="demo" />
-        <module name="hs-common" />
+        <module name="znfx-common" />
+        <module name="znfx-mbg" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="1.8" />
-      <module name="hs-admin" target="1.8" />
-      <module name="hs-common" target="1.8" />
-      <module name="hs-main" target="1.8" />
-      <module name="hs-mbg" target="1.8" />
-      <module name="hs-security" target="1.8" />
-      <module name="hs_code" target="1.8" />
+      <module name="znfx-admin" target="1.8" />
+      <module name="znfx-common" target="1.8" />
+      <module name="znfx-main" target="1.8" />
+      <module name="znfx-mbg" target="1.8" />
+      <module name="znfx-security" target="1.8" />
+      <module name="znfx_code" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
-      <module name="hs-admin" options="-parameters" />
-      <module name="hs-common" options="-parameters" />
-      <module name="hs-main" options="-parameters" />
-      <module name="hs-mbg" options="-parameters" />
-      <module name="hs-security" options="-parameters" />
+      <module name="znfx-admin" options="-parameters" />
+      <module name="znfx-common" options="-parameters" />
+      <module name="znfx-main" options="-parameters" />
+      <module name="znfx-mbg" options="-parameters" />
+      <module name="znfx-security" options="-parameters" />
     </option>
   </component>
 </project>

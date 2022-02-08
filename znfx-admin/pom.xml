@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hs</artifactId>
+        <artifactId>znfx</artifactId>
         <groupId>cn.njust.label</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>hs-main</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>hs-main</name>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>znfx-admin</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <description>Main project for Spring Boot</description>
     <dependencies>
         <dependency>
             <groupId>cn.njust.label</groupId>
-            <artifactId>hs-mbg</artifactId>
+            <artifactId>znfx-mbg</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>cn.njust.label</groupId>-->
-<!--            <artifactId>lt-security</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>cn.njust.label</groupId>
+            <artifactId>znfx-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+        </dependency>
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>

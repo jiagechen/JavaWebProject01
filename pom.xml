@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.njust.label</groupId>
-    <artifactId>hs</artifactId>
+    <artifactId>znfx</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>hs-common</module>
-        <module>hs-mbg</module>
-        <module>hs-security</module>
+        <module>znfx-common</module>
+        <module>znfx-mbg</module>
+        <module>znfx-security</module>
         <module>lt-demo</module>
-        <module>hs-admin</module>
-        <module>hs-main</module>
+        <module>znfx-admin</module>
+        <module>znfx-main</module>
     </modules>
 
     <parent>
@@ -44,9 +44,9 @@
         <logstash-logback.version>5.3</logstash-logback.version>
         <minio.version>3.0.10</minio.version>
         <guava.version>20.0</guava.version>
-        <hs-common.version>1.0-SNAPSHOT</hs-common.version>
-        <hs-mbg.version>1.0-SNAPSHOT</hs-mbg.version>
-        <hs-security.version>1.0-SNAPSHOT</hs-security.version>
+        <znfx-common.version>1.0-SNAPSHOT</znfx-common.version>
+        <znfx-mbg.version>1.0-SNAPSHOT</znfx-mbg.version>
+        <znfx-security.version>1.0-SNAPSHOT</znfx-security.version>
     </properties>
 
     <dependencies>
@@ -83,20 +83,20 @@
             <!--通用模块-->
             <dependency>
                 <groupId>cn.njust.label</groupId>
-                <artifactId>hs-common</artifactId>
-                <version>${hs-common.version}</version>
+                <artifactId>znfx-common</artifactId>
+                <version>${znfx-common.version}</version>
             </dependency>
             <!--mall中MBG生成模块-->
             <dependency>
                 <groupId>cn.njust.label</groupId>
-                <artifactId>hs-mbg</artifactId>
-                <version>${hs-mbg.version}</version>
+                <artifactId>znfx-mbg</artifactId>
+                <version>${znfx-mbg.version}</version>
             </dependency>
             <!--mall安全模块-->
             <dependency>
                 <groupId>cn.njust.label</groupId>
-                <artifactId>hs-security</artifactId>
-                <version>${hs-security.version}</version>
+                <artifactId>znfx-security</artifactId>
+                <version>${znfx-security.version}</version>
             </dependency>
             <!--MyBatis分页插件starter-->
             <dependency>
