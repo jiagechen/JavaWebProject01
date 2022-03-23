@@ -15,6 +15,10 @@
     <description>Main project for Spring Boot</description>
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
             <groupId>cn.njust.label</groupId>
             <artifactId>znfx-mbg</artifactId>
         </dependency>

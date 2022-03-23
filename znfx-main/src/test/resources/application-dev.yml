@@ -20,8 +20,10 @@ spring:
     timeout: 300ms # 连接超时时间（毫秒）
   data:
     mongodb:
-#      uri: mongodb://103.46.128.46:14959/znfx
-      uri: mongodb://localhost:27017/Trajectory
+#      uri: mongodb://localhost:27017/Trajectory
+      uri: mongodb://114.115.151.17:6001/znfx
+
+
 
 logging:
   level:
